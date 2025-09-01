@@ -106,7 +106,7 @@ if isfile(results_filename)
         results_statistical_table = table();
     end
 else
-    % if file does not exist, create empty tables
+    % se il file non esiste crea una tabella vuota
     results_glcm_table = table( ...
         'Size', [0 11], ...
         'VariableTypes', {'double', 'double', 'string', 'double', 'double', 'double', 'double', 'double', 'double', 'double', 'double'}, ...
@@ -158,7 +158,7 @@ stat_row = { ...
     writetable(results_statistical_table, results_filename, 'Sheet', 'Statistical features');
 end
 
-% stampa dei risultati solo in caso positivo e visualizzazione della
+% stampa dei risultati solo in caso positivo (tumore rilevato) e visualizzazione della
 % regione tumorale
 if(has_tumor) 
     fprintf("Tumour has been highlighted in cluster nr. %d\n", tumor_cluster);
