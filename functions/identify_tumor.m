@@ -1,8 +1,8 @@
 function [tumor_cluster, tumor_mask, has_tumor, metrics] = identify_tumor(cluster_labels, features_per_cluster, ground_truth_mask, num_clusters)
     arguments (Input)
         cluster_labels %pixels for each cluster
-        features_per_cluster % Struct con campi Entropy, Contrast, Correlation, etc.
-        ground_truth_mask
+        features_per_cluster % Struct with Entropy, Contrast, Correlation, etc. fields
+        ground_truth_mask %ground truth mask for segmentation evaluation
         num_clusters    % num clusters (fixed)
     end
 

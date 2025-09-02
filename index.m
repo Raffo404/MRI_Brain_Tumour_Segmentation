@@ -33,7 +33,7 @@ answerSlice = inputdlg('Insert number of slice you want to process', 'MRI slice 
 sliceIdx = str2double(answerSlice{1});
 
 % modalità di acquisizione 
-modality_names = {'FLAIR','T1','T1c','T2',};
+modality_names = {'FLAIR','T1','T1c','T2'};
 
 figure('Name', 'Modality Options');
 for i = 1:4
